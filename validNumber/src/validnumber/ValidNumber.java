@@ -11,7 +11,7 @@ package validnumber;
  */
 public class ValidNumber {
 
-    private static short[][] transitionTable = {
+    private static final short[][] TRANSITION_TABLE = {
         {0, 0, 8, 0, 8, 8, 0, 8, 8, 9, 0}, //white
         {0, 2, 2, 5, 5, 5, 7, 7, 0, 2, 7}, //digit
         {0, 3, 4, 0, 0, 0, 0, 0, 0, 3, 0}, //'.'
@@ -41,25 +41,25 @@ public class ValidNumber {
                 case '7':
                 case '8':
                 case '9': {
-                    status = transitionTable[1][status];
+                    status = TRANSITION_TABLE[1][status];
                     break;
                 }
                 case ' ':
                 case '\t': {
-                    status = transitionTable[0][status];
+                    status = TRANSITION_TABLE[0][status];
                     break;
                 }
                 case '.': {
-                    status = transitionTable[2][status];
+                    status = TRANSITION_TABLE[2][status];
                     break;
                 }
                 case 'e': {
-                    status = transitionTable[3][status];
+                    status = TRANSITION_TABLE[3][status];
                     break;
                 }
                 case '-':
                 case '+': {
-                    status = transitionTable[4][status];
+                    status = TRANSITION_TABLE[4][status];
                     break;
                 }
                 default:
