@@ -56,7 +56,8 @@ public class ValidNumber {
                     status = transitionTable[3][status];
                     break;
                 }
-                case '-': {
+                case '-':
+                case '+': {
                     status = transitionTable[4][status];
                     break;
                 }
