@@ -20,7 +20,7 @@ public class ValidNumber {
 
     public boolean isNumber(String s) {
         short[][] transitionTable = {
-            {0, 1, 8, 0, 8, 8, 0, 8, 8, 9, 0}, //white
+            {0, 0, 8, 0, 8, 8, 0, 8, 8, 9, 0}, //white
             {0, 2, 2, 5, 5, 5, 7, 7, 0, 2, 7}, //digit
             {0, 3, 4, 0, 0, 0, 0, 0, 0, 3, 0}, //'.'
             {0, 0, 6, 0, 0, 6, 0, 0, 0, 0, 0}, //'e'    
