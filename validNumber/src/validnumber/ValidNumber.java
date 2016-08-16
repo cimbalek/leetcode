@@ -27,22 +27,52 @@ public class ValidNumber {
             {0, 0, 0, 0, 0, 0, 10, 0, 0, 1, 0}};   //-
 
         short status = 9;
-        for (char c : s.toCharArray()) {
-            switch (c) {
-                case ' ':
+        for (int i = 0; i < s.length(); i++) {
+            switch (s.charAt(i)) {
+                case ' ': {
+                    status = transitionTable[0][status];
+                    break;
+                }
                 case '\t': {
                     status = transitionTable[0][status];
                     break;
                 }
-                case '0':
-                case '1':
-                case '2':
-                case '3':
-                case '4':
-                case '5':
-                case '6':
-                case '7':
-                case '8':
+                case '0': {
+                    status = transitionTable[1][status];
+                    break;
+                }
+                case '1': {
+                    status = transitionTable[1][status];
+                    break;
+                }
+                case '2': {
+                    status = transitionTable[1][status];
+                    break;
+                }
+                case '3': {
+                    status = transitionTable[1][status];
+                    break;
+                }
+                case '4': {
+                    status = transitionTable[1][status];
+                    break;
+                }
+                case '5': {
+                    status = transitionTable[1][status];
+                    break;
+                }
+                case '6': {
+                    status = transitionTable[1][status];
+                    break;
+                }
+                case '7': {
+                    status = transitionTable[1][status];
+                    break;
+                }
+                case '8': {
+                    status = transitionTable[1][status];
+                    break;
+                }
                 case '9': {
                     status = transitionTable[1][status];
                     break;
@@ -56,7 +86,10 @@ public class ValidNumber {
                     status = transitionTable[3][status];
                     break;
                 }
-                case '-':
+                case '-': {
+                    status = transitionTable[4][status];
+                    break;
+                }
                 case '+': {
                     status = transitionTable[4][status];
                     break;
